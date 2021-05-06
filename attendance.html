@@ -1,0 +1,83 @@
+<!DOCTYPE html5>
+
+<html>
+
+<head>
+    <title>Attendance Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="emp.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="pJS/attendance.js">
+     
+    </script>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <form method="GET" class="needs-validation">
+                <div class="form-group">
+                    <lable class="col-4 control-label">UserName </lable>
+                    <input class="col-6 form-control" type="text" id="userName" min=6 max=8 placeholder="UserName"
+                        required />
+                    <div class="invalid-feedback">
+                        Please , Enter valid userName
+                    </div>
+                </div>
+                <div class="col-7">
+                    <input type="button" value="confirm" class=" btn " id="confirm" data-toggle="modal"  />
+                    <input type="button" value="save" id="saves" class=" btn" />
+                </div>
+            </form>
+        </div>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-login">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title ">Attendance Info</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post">
+                            <div>
+                                <p style="display: inline;">Employee name:</p>
+                                <!-- <input type="text" value="Employee name:" id="emp" readonly /> -->
+                                <input type="text" id="em" readonly /> <br><br><br>
+                                
+                            </div>
+                            <div>
+                                <p style="display: inline;">Attendance Time:</p>
+                                <input type="text" id="ff" readonly />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn " data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalMsg" class="modal fade">
+            <div class="modal-dialog modal-login">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title ">Attendance Info</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>User Name Not found</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/JQuery-3.3.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

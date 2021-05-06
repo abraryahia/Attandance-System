@@ -1,0 +1,200 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+  <title>Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="pCSS/emp.css">
+
+  <script src="pJS/home.js" type="module">
+
+  </script>
+  <script src="pJS/homeFun.js">
+
+  </script>
+</head>
+
+<body>
+
+  <div class="vertical-nav bg-white" id="sidebar">
+    <div class="py-4 px-3 mb-4 bg-light">
+      <div class="media d-flex align-items-center">
+        <div class="media-body">
+          <img class="m-0" src="img/large.png" style="width: 70% ; margin-left: 20px;" />
+          <p class="font-weight-normal text-muted mb-0">Software company </p>
+        </div>
+      </div>
+    </div>
+    <ul class="nav flex-column bg-white mb-0nav  mb-3 header" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a href="#home" class="nav-link active" data-toggle="pill">
+          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+          home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#log" class="nav-link " data-toggle="pill">
+          <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+          login
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#reg" class="nav-link " data-toggle="pill">
+          <i class="fa fa-list-alt mr-3 text-primary fa-fw"></i>
+          Register
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#about" class="nav-link " data-toggle="pill">
+          <i class="fa fa-list-alt mr-3 text-primary fa-fw"></i>
+          About us
+        </a>
+      </li>
+
+
+    </ul>
+
+  </div>
+  <div class="page-content p-5" id="content">
+    <button id="sidebarCollapse" type="button" class="btn btn-light  rounded-pill shadow-sm px-4 mb-4"><i
+        class="fa fa-bars mr-2"></i></button>
+    <div class="tab-content" id="pills-tabContent"> 
+     <!--Home Form-->
+    <div id="home" class=" tab-pane fade show active ">
+      <div class="tab-content  " id="pills-tabContent">
+        <div class="carousel w-100 m-auto bg-warning slide" id="mycarousel" data-ride="carousel" data-interval="1500">
+          <ul class="carousel-indicators">
+            <li data-slide-to="0" data-target="#mycarousel2" class="active"></li>
+            <li data-slide-to="1" data-target="#mycarousel2"></li>
+            <li data-slide-to="2" data-target="#mycarousel2"></li>
+            <!-- <li data-slide-to="3" data-target="#mycarousel2"></li> -->
+          </ul><!-- End Indicators-->
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <h3 class="carousel-caption">Welcome to our website </h3>
+              <img src="img/firstimg.jpg" />
+            </div>
+            <div class="carousel-item">
+              <img src="img/fourimg.jpg" />
+              <p class="carousel-caption"> </p>
+            </div>
+            <div class="carousel-item">
+              <img src="img/thirdimg.jpg" />
+              <p class="carousel-caption"></p>
+            </div>
+          </div>
+          <!--end of carousel inner-->
+          <a class="carousel-control-prev" data-slide="prev" data-target="#mycarousel2" href="#"><span
+              class="carousel-control-prev-icon"></span></a>
+          <a class="carousel-control-next" data-slide="next" data-target="#mycarousel2" href="#"><span
+              class="carousel-control-next-icon"></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!--login form -->
+    <div class="tab-pane fade " id="log">
+      <form method="GET" class="needs-validation" id="logForm" novalidate>
+        <div class="form-group ">
+          <lable class=" col-4 offset-2 control-label">UserName </lable>
+          <input class="  col-6 offset-2 form-control" id="UserName" type="text" placeholder="firstName" required />
+          <div class="col-4 offset-2 invalid-feedback">
+            Please ,Enter valid UserName
+          </div>
+        </div>
+        <div class="form-group control-label">
+          <lable class="col-4 offset-2 ">Password </lable>
+          <input class=" col-6 offset-2  form-control" id="pass" type="password" placeholder="Password" required />
+          <div class="col-4 offset-2 invalid-feedback">
+            Please ,Enter valid Password
+          </div>
+        </div>
+        <div class="col-5 offset-4 ">
+          <input type="submit" class="btn " value="login" />
+
+        </div>
+        <div class="col-5 offset-4 ">
+          <span>I haven`t account ,please go to Register </span>
+          <a href="#reg" data-toggle="pill" target="-self">Sign up</a>
+        </div>
+      </form>
+    </div>
+   <!--Register Form-->
+    <div class="tab-pane fade " id="reg">
+      <form method="post" class="needs-validation" novalidate>
+        <div class="form-group ">
+          <lable class="col-4 offset-2 control-label">First Name </lable>
+          <input class=" col-6 offset-2 form-control" type="text" placeholder="firstName"
+            onkeydown="return alphaOnly(event);" id="fName" required />
+          <div class="col-4 offset-2 invalid-feedback">
+            Please ,Enter your First Name
+          </div>
+        </div>
+
+        <div class="form-group">
+          <lable class="col-4 offset-2 control-label">Last Name </lable>
+          <input class="col-6 offset-2 form-control" type="text" placeholder="lastName"
+            onkeydown="return alphaOnly(event);" id="lName" required />
+          <div class="col-4 offset-2 invalid-feedback">
+            Please ,Enter your last Name
+          </div>
+        </div>
+
+        <div class="form-group">
+          <lable class="col-4 offset-2 control-label">Address </lable>
+          <input class="col-6 offset-2 form-control" type="text" placeholder="Address" required id="Address" />
+          <div class="col-4 offset-2 invalid-feedback">
+            Please , Enter your address
+          </div>
+        </div>
+
+        <div class="form-group control-label">
+          <lable class="col-4 offset-2">E-mail </lable>
+          <input class="col-6 offset-2 form-control" type="email" placeholder="email" id="email" required
+            onkeydown="return validEmail(event)" id="email" />
+          <div class="col-4 offset-2 invalid-feedback">
+            Please , Enter valid E-mail
+          </div>
+        </div>
+
+        <div class="form-group control-label">
+          <lable class="col-4 offset-2">Age </lable>
+          <input class="col-6 offset-2 form-control" type="number" min="22" max="60" placeholder="Age" id="age"
+            required />
+          <div class=" col-4 offset-2 invalid-feedback">
+            Please , Enter valid Age
+          </div>
+        </div>
+        <div class="col-5 offset-4 ">
+          <input type="submit" class="btn " value="Submit" />
+        </div>
+
+      </form>
+
+    </div>
+    <div class="tab-pane fade " id="about">
+      <p>We are a software company </p>
+      <p>It`s company is a special in website designer </p>
+      <p>This is a website to take attendance for employees</p>
+      <p>If you want to connect us please send us Email </p>
+      <email style="color: blue;">abraryahya18@gmail.com</email>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="js/JQuery-3.3.1.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    $(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

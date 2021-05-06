@@ -1,0 +1,153 @@
+<!DOCTYPE html5>
+<html>
+<head>
+    <title>Employee Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="pCSS/emp.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+     <script src="pJS/admin.js"  >
+      
+    </script>
+    
+</head>
+
+<body>
+    <div class="vertical-nav bg-white" id="sidebar">
+        <div class="py-4 px-3 mb-4 bg-light">
+            <div class="media d-flex align-items-center">
+                <div class="media-body">
+                    <h4 class="m-0">Abrar Yahia</h4>
+                    <p class="font-weight-normal text-muted mb-0">Admin</p>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav flex-column bg-white mb-0nav  mb-3 header" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active" data-toggle="pill">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Emp" class="nav-link " data-toggle="pill">
+                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                    Employee
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#fullRep" class="nav-link " data-toggle="pill">
+                    <i class="fa fa-list-alt mr-3 text-primary fa-fw"></i>
+                    Full Report
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#attendRep" class="nav-link " data-toggle="pill">
+                    <i class="fa fa-list-alt mr-3 text-primary fa-fw"></i>
+                    Attend Report
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#lateRep" class="nav-link " data-toggle="pill">
+                    <i class="fa fa-list-alt mr-3 text-primary fa-fw"></i>
+                    late Report
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#AbsentRep" class="nav-link " data-toggle="pill">
+                    <i class="fa fa-list-alt mr-3 text-primary fa-fw"></i>
+                    Absent Report
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#empReq" class="nav-link " data-toggle="pill">
+                    <i class="fa fa-file-text mr-3 text-primary fa-fw"></i>
+                    Request
+                </a>
+            </li>
+            
+               
+            
+        </ul>
+
+    </div>
+    <!-- End vertical navbar -->
+
+
+    <!-- Page content holder -->
+    <div class="page-content p-5" id="content">
+        <!-- Toggle button -->
+        <button id="sidebarCollapse" type="button" class="btn btn-light  rounded-pill shadow-sm px-4 mb-4"><i
+                class="fa fa-bars mr-2"></i></button>
+                <a href="home.html" class="btn" style="float: right; color:#f3f2f2; background-color:#7579e7;"> log out</a>
+        <div class="tab-content" id="pills-tabContent"> 
+            <div id="home" class=" tab-pane fade show active ">
+                <div class="tab-content  " id="pills-tabContent">
+                  <div class="carousel w-100 m-auto bg-warning slide" id="mycarousel" data-ride="carousel" data-interval="1500">
+                    <ul class="carousel-indicators">
+                      <li data-slide-to="0" data-target="#mycarousel2" class="active"></li>
+                      <li data-slide-to="1" data-target="#mycarousel2"></li>
+                      <li data-slide-to="2" data-target="#mycarousel2"></li>
+                      <!-- <li data-slide-to="3" data-target="#mycarousel2"></li> -->
+                    </ul><!-- End Indicators-->
+                    <div class="carousel-inner text-center">
+                      <div class="carousel-item active">
+                        <h3 class="carousel-caption">Welcome to our website </h3>
+                        <img src="img/firstimg.jpg" />
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/fourimg.jpg" />
+                        <p class="carousel-caption"> </p>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/thirdimg.jpg" />
+                        <p class="carousel-caption"></p>
+                      </div>
+                    </div>
+                    <!--end of carousel inner-->
+                    <a class="carousel-control-prev" data-slide="prev" data-target="#mycarousel2" href="#"><span
+                        class="carousel-control-prev-icon"></span></a>
+                    <a class="carousel-control-next" data-slide="next" data-target="#mycarousel2" href="#"><span
+                        class="carousel-control-next-icon"></span></a>
+                  </div>
+                </div>
+              </div>
+        <div class="tab-pane fade " id="Emp" >
+
+        </div>
+        <div class="tab-pane fade " id="fullRep" >
+
+        </div>
+        <div class="tab-pane fade " id="attendRep" >
+
+        </div>
+        <div class="tab-pane fade " id="lateRep" >
+
+        </div>
+        <div class="tab-pane fade  " id="AbsentRep">
+
+        </div>
+        <div class="tab-pane fade " id="empReq" >
+            <!-- <button type="button" id="accept" class=" btn ">Accept</button>-->
+            <button type="button" id="Save" class=" btn " onclick="SaveData(emp);">Save</button>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="js/JQuery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
